@@ -1,0 +1,438 @@
+/* main.css */
+.extension-container {
+  width: 360px;
+  height: 600px;
+  background-color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Header Styles */
+.extension-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-button {
+  background: none;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.profile-button:hover {
+  background-color: #f3f4f6;
+}
+
+.profile-icon {
+  width: 24px;
+  height: 24px;
+  fill: #4b5563;
+}
+
+.logout-button {
+  padding: 8px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #4b5563;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #f9fafb;
+  border-color: #d1d5db;
+}
+
+/* Main Content Styles */
+.extension-main {
+  padding: 16px;
+}
+
+/* Instructions Styles */
+.instruction-box {
+  background-color: #f3f4f6;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: left;
+}
+
+.instruction-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.get-started-header {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: #000000;
+}
+
+.step-indicator {
+  font-size: 12px;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.instruction-text {
+  font-size: 14px;
+  color: #000000;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.plus-sign-container {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+  color: #4B5563;
+}
+
+.plus-sign {
+  width: 48px;
+  height: 48px;
+  background-color: #4285F4;
+  border-radius: 50%;
+  padding: 8px;
+  color: white;
+}
+
+.instruction-tooltip {
+  position: absolute;
+  bottom: -12px;
+  left: 16px;
+  right: 16px;
+  background-color: #2563eb;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  animation: slideUp 0.3s ease-out;
+}
+
+.tooltip-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.tooltip-close:hover {
+  opacity: 1;
+}
+
+/* Tools Section Styles */
+.tools-section {
+  margin-bottom: 24px;
+}
+
+.tools-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+}
+
+.tool-card {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.tool-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tool-icon-wrapper {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.tool-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tool-info {
+  flex: 1;
+}
+
+.tool-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  color: #1a1a1a;
+}
+
+.tool-info p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0 0 8px 0;
+}
+
+.tool-features {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 13px;
+  color: #4b5563;
+  list-style-type: disc;
+}
+
+.tool-features li {
+  margin: 4px 0;
+}
+
+/* Footer Styles */
+.extension-footer {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-nav button {
+  background: none;
+  border: none;
+  color: #4b5563;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.footer-nav button:hover {
+  color: #2563eb;
+}
+
+.nav-separator {
+  color: #9ca3af;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom Scrollbar */
+.extension-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.extension-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.extension-container::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.extension-container::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Dark Theme Support */
+@media (prefers-color-scheme: dark) {
+  .extension-container {
+    background-color: #1a1a1a;
+  }
+
+  .extension-header {
+    background-color: #1a1a1a;
+    border-bottom-color: #2d2d2d;
+  }
+
+  .logo {
+    color: #ffffff;
+  }
+
+  .logout-button {
+    background-color: #2d2d2d;
+    border-color: #3d3d3d;
+    color: #e5e7eb;
+  }
+
+  .logout-button:hover {
+    background-color: #3d3d3d;
+  }
+
+  .instruction-box {
+    background-color: #2d2d2d;
+    color: #e5e7eb;
+  }
+
+  .get-started-header {
+    color: #ffffff;
+  }
+
+  .instruction-text {
+    color: #e5e7eb;
+  }
+
+  .tool-card {
+    background-color: #2d2d2d;
+    border-color: #3d3d3d;
+  }
+
+  .tool-info h4 {
+    color: #ffffff;
+  }
+
+  .tool-info p {
+    color: #e5e7eb;
+  }
+
+  .tool-features {
+    color: #e5e7eb;
+  }
+
+  .tools-title {
+    color: #ffffff;
+  }
+
+  .footer-nav button {
+    color: #e5e7eb;
+  }
+
+  .footer-nav button:hover {
+    color: #60a5fa;
+  }
+
+  .nav-separator {
+    color: #e5e7eb;
+  }
+
+  .profile-icon {
+    fill: #e5e7eb;
+  }
+
+  .profile-button:hover {
+    background-color: #2d2d2d;
+  }
+
+  .step-indicator {
+    color: #60a5fa;
+  }
+
+  .extension-container::-webkit-scrollbar-track {
+    background: #2d2d2d;
+  }
+
+  .extension-container::-webkit-scrollbar-thumb {
+    background: #4b5563;
+  }
+
+  .extension-container::-webkit-scrollbar-thumb:hover {
+    background: #6b7280;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 360px) {
+  .extension-container {
+    width: 100%;
+  }
+
+  .tool-card {
+    padding: 12px;
+  }
+
+  .tool-icon-wrapper {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+  .tool-card,
+  .tool-card:hover,
+  .instruction-tooltip {
+    transition: none;
+    animation: none;
+  }
+}
+
+/* Focus States */
+.logout-button:focus,
+.profile-button:focus,
+.footer-nav button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #2563eb33;
+}
+
+/* Print Styles */
+@media print {
+  .extension-container {
+    height: auto;
+    overflow: visible;
+  }
+
+  .logout-button,
+  .profile-button,
+  .footer-nav {
+    display: none;
+  }
+}

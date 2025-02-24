@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "TIMIO Chrome - Early Access",
+  "version": "1.0",
+  "description": "Article insights extension",
+  "permissions": [
+    "storage"
+  ],
+  "icons": {
+    "16": "TIMIOCircle128.png",
+    "32": "TIMIOCircle128.png",
+    "48": "TIMIOCircle128.png",
+    "128": "TIMIOCircle128.png"
+  },
+  "host_permissions": [
+    "https://timio-extension.onrender.com/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://timio-extension.onrender.com https://identitytoolkit.googleapis.com https://*.firebaseapp.com https://*.googleapis.com;"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["lottie.min.js", "lottie-manager.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "Pivot_Icon.png",
+        "lottie-manager.js",
+        "Torch_Icon.png",
+        "lottie.min.js",
+        "torch.json",
+        "pivot.json",
+        "lottie-helper.js"
+      ],
+      "matches": ["<all_urls>"],
+      "use_dynamic_url": true
+    }
+  ]
+}
